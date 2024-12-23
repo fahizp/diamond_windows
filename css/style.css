@@ -8484,6 +8484,7 @@ html {
 	line-height: 20px;
 	font-size: 12px;
 	font-weight: 900;
+	margin-left: -6px;
 	
   }
   .multi-select .multi-select-header .multi-select-header-option {
