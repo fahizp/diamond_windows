@@ -8453,7 +8453,7 @@ html {
   }
   .multi-select .multi-select-header {
     /* border: 1px solid #dee2e6; */
-    padding: 7px 30px 7px 12px;
+    padding: 7px 30px 7px 11px;
     overflow: hidden;
     gap: 7px;
     min-height: 40px;
