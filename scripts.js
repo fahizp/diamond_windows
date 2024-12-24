@@ -1,21 +1,21 @@
 $(document).ready(function () {
     var sync1 = $("#sync1");
     var sync2 = $("#sync2");
-    var slidesPerPage = 5; // Adjust the number of thumbnails visible
+    var slidesPerPage = 3; // Adjust the number of thumbnails visible
     var syncedSecondary = true;
+
     sync1.owlCarousel({
         items: 1,
         slideSpeed: 3000,
         nav: true,
         autoplay: true, // Enable auto-sliding
-        autoplayTimeout: 3000, // Time in milliseconds (e.g., 5000ms = 5 seconds)
+        autoplayTimeout: 3000, // 3 seconds
         autoplayHoverPause: true, // Pause autoplay on hover
         dots: false,
         loop: true,
         responsiveRefreshRate: 200,
         navText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
     }).on('changed.owl.carousel', syncPosition);
-    
 
     sync2.owlCarousel({
         items: slidesPerPage,
@@ -24,13 +24,13 @@ $(document).ready(function () {
         margin: 10,
         smartSpeed: 200,
         slideSpeed: 500,
-        slideBy: slidesPerPage, 
-        responsiveRefreshRate: 100
+        slideBy: slidesPerPage,
+        responsiveRefreshRate: 100,
     }).on('changed.owl.carousel', syncPosition2);
 
     function syncPosition(el) {
         var count = el.item.count - 1;
-        var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+        var current = Math.round(el.item.index - (el.item.count / 2) - 0.5);
 
         if (current < 0) {
             current = count;
